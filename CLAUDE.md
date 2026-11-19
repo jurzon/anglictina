@@ -6,7 +6,7 @@ Učebná hra pre slovensky hovoriacich. Čisté HTML/CSS/JS bez buildu, nasaden�
 - `js/` a `tools/` sú **spoločný engine**, ktorý je identický so sesterským repozitárom `../taliancina`. Každú zmenu v `js/` alebo `tools/` treba preniesť aj tam (skopírovať priečinok) a skontrolovať oba repozitáre cez `diff -r`.
 - V `js/` nesmie byť nič jazykovo špecifické. Jazyk, značka, maskot a texty hier patria do `data/config.js`, zoznam lekcií do `data/index.js`.
 - Minihry: register je v `js/games/index.js`. Každá hra exportuje `view(lesson, rerender)` a `validate(lesson, err)`. Lekcia si hry vyberá cez `games: [...]`.
-- Hry: `stars`, `choice`, `build`, `walk` (odkaz na záznamníku + mapa), `pairs` (páry s pohármi), `pond` (páry na jazere), `spell` (hláskovanie). Zvuky a efekty sú v `js/fx.js`.
+- Hry: `stars`, `choice`, `build`, `walk` (odkaz na záznamníku + mapa), `pairs` (páry s pohármi), `pond` (páry na jazere), `sort` (triedenie do skupín), `spell` (hláskovanie). Formát lekcie je opísaný v `docs/lekcia.md`. Zvuky a efekty sú v `js/fx.js`.
 - Štýly hier sú v `css/style.css`; ten zdieľaný nie je, nové štýly treba do taliancina preniesť ručne.
 
 ## Obsah
