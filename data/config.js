@@ -16,6 +16,9 @@ export default {
   },
   keepCaps: ['I', 'Žilina', 'Košice', 'Bardejov', 'Bratislava', 'Prešov'],
 
+  // Zdieľanie so žiakmi (tlačidlo 📲 na úvodnej obrazovke): verejná adresa appky a jej QR kód.
+  share: { url: 'https://jurzon.github.io/anglictina/', qr: 'docs/qr.svg' },
+
   brand: {
     kicker: 'Towns and cities',
     title: ['Angličtina', 'hrou'],
