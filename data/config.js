@@ -8,6 +8,12 @@ export default {
   // Jedno ťukateľné slovo (regex bez príznakov). Angličtina: aj stiahnuté tvary (don't, it's, I'm, Tom's).
   word: "\\p{L}+(?:['’]\\p{L}+)*",
   // Slová, ktoré sa na začiatku vety v skladačke nezmenšujú
+  // Ako sa vyslovujú písmená pri hláskovaní (Spell it!). Hlas by inak hovoril „capital C“.
+  letters: {
+    a: 'ay', b: 'bee', c: 'see', d: 'dee', e: 'ee', f: 'eff', g: 'gee', h: 'aitch', i: 'eye',
+    j: 'jay', k: 'kay', l: 'el', m: 'em', n: 'en', o: 'oh', p: 'pee', q: 'queue', r: 'are',
+    s: 'ess', t: 'tee', u: 'you', v: 'vee', w: 'double you', x: 'ex', y: 'why', z: 'zed',
+  },
   keepCaps: ['I', 'Žilina', 'Košice', 'Bardejov', 'Bratislava', 'Prešov'],
 
   brand: {
