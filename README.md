@@ -13,6 +13,26 @@ Angličtina pre slovensky hovoriacich žiakov: príbehy, v ktorých sa dá ťukn
   <img src="docs/lake.png" width="200" alt="Jazero opozít – slová sa vynárajú z vody">
 </p>
 
+## Pre učiteľa: ako to dať žiakom
+
+<img src="docs/qr.svg" width="180" align="right" alt="QR kód na https://jurzon.github.io/anglictina/">
+
+1. **Premietni QR kód** na tabuľu alebo ho vytlač (pravým tlačidlom → Uložiť obrázok). Žiaci ho naskenujú fotoaparátom v mobile.
+2. Alebo im pošli odkaz **https://jurzon.github.io/anglictina/**
+3. Appku si môžu pridať na plochu (v Chrome ⋮ → *Pridať na plochu*), potom sa otvára ako bežná aplikácia.
+
+Netreba žiadne konto ani inštaláciu. Pokrok sa ukladá iba v mobile žiaka.
+
+**Priame odkazy na hry** (napr. na domácu úlohu):
+[Príbeh](https://jurzon.github.io/anglictina/#/l/u5/read/0) ·
+[Voicemail](https://jurzon.github.io/anglictina/#/l/u5/walk) ·
+[What is there to see?](https://jurzon.github.io/anglictina/#/l/u5/sort) ·
+[Opposites](https://jurzon.github.io/anglictina/#/l/u5/pairs) ·
+[Opposite Lake](https://jurzon.github.io/anglictina/#/l/u5/pond) ·
+[Spell it!](https://jurzon.github.io/anglictina/#/l/u5/spell)
+
+<br clear="right">
+
 ## Lekcie
 
 | Lekcia | Téma | Slovná zásoba a gramatika |
