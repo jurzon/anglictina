@@ -9,9 +9,10 @@ export default {
   storyTitle: 'Postcards from Slovakia',
   choiceTitle: 'Where is it? What\'s it like?',
   choiceHint: 'in the north of Slovakia = na severe Slovenska (vo vnútri). north of Košice = na sever od Košíc (mimo nich).',
+  sortTitle: 'What is there to see?',
   pairsTitle: 'Opposites',
   pairsHint: 'Ťukni na slovo vľavo a potom na jeho opak vpravo.',
-  games: ['walk', 'pairs', 'pond', 'spell', 'choice', 'build'],
+  games: ['walk', 'sort', 'pairs', 'pond', 'spell', 'choice', 'build'],
 
   chapters: [
     {
@@ -491,6 +492,38 @@ says | hovorí | say
     ['big', 'small', 'veľký – malý'],
   ],
 
+  // Roztrieď (Vocabulary Bank, cvičenie 3): [slovo, skupina, preklad, ikona]
+  sort: {
+    bins: [
+      { name: 'Religious buildings', sk: 'náboženské stavby', icon: '🛐' },
+      { name: 'Places where you can buy things', sk: 'kde sa dá nakupovať', icon: '🛍️' },
+      { name: 'Historic buildings and monuments', sk: 'historické budovy a pamiatky', icon: '🏰' },
+      { name: 'Others', sk: 'ostatné', icon: '🧭' },
+    ],
+    items: [
+      ['cathedral', 0, 'katedrála', '⛪'],
+      ['church', 0, 'kostol', '⛪'],
+      ['mosque', 0, 'mešita', '🕌'],
+      ['synagogue', 0, 'synagóga', '🕍'],
+      ['temple', 0, 'chrám', '🛕'],
+      ['department store', 1, 'obchodný dom', '🏬'],
+      ['market', 1, 'trh', '🧺'],
+      ['shopping centre', 1, 'nákupné centrum (mall)', '🛒'],
+      ['castle', 2, 'hrad', '🏰'],
+      ['city walls', 2, 'mestské hradby', '🧱'],
+      ['palace', 2, 'palác', '👑'],
+      ['ruins', 2, 'ruiny, zrúcanina', '🏚️'],
+      ['statue', 2, 'socha', '🗽'],
+      ['town hall', 2, 'radnica', '🏛️'],
+      ['bridge', 3, 'most', '🌉'],
+      ['canal', 3, 'kanál (vodný)', '🛶'],
+      ['harbour', 3, 'prístav', '⚓'],
+      ['hill', 3, 'kopec', '⛰️'],
+      ['lake', 3, 'jazero', '🏞️'],
+      ['museum', 3, 'múzeum', '🖼️'],
+    ],
+  },
+
   // Spelling: w = slovo, sk = preklad
   spell: [
     { w: 'castle', sk: 'hrad' },
@@ -504,6 +537,15 @@ says | hovorí | say
     { w: 'harbour', sk: 'prístav' },
     { w: 'town hall', sk: 'radnica' },
     { w: 'city walls', sk: 'mestské hradby' },
+    { w: 'canal', sk: 'kanál (vodný)' },
+    { w: 'department store', sk: 'obchodný dom' },
+    { w: 'shopping centre', sk: 'nákupné centrum' },
+    { w: 'hill', sk: 'kopec' },
+    { w: 'lake', sk: 'jazero' },
+    { w: 'mosque', sk: 'mešita' },
+    { w: 'synagogue', sk: 'synagóga' },
+    { w: 'temple', sk: 'chrám' },
+    { w: 'ruins', sk: 'ruiny' },
     { w: 'crowded', sk: 'plný ľudí' },
     { w: 'dangerous', sk: 'nebezpečný' },
     { w: 'polluted', sk: 'znečistený' },

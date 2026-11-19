@@ -143,6 +143,31 @@ h1, h2 { text-wrap: balance; }
 .chapter.read .chapter-n { background: var(--green); color: var(--on-green); border-color: transparent; }
 .foot { margin-top: 20px; text-align: center; font-size: .78rem; line-height: 1.7; color: var(--muted); }
 
+/* Hlavička domovskej obrazovky: appka → lekcia */
+.app-bar { display: flex; align-items: center; gap: 10px; padding: 10px 0 14px; }
+.app-logo { width: 36px; height: 36px; border-radius: 10px; flex: none; }
+.app-name { flex: 1; min-width: 0; font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--green); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-bar .streak { flex: none; padding: 4px 10px; font-size: .85rem; }
+.lesson-switch { display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px 12px; padding: 2px 16px 4px; scrollbar-width: none; }
+.lesson-switch::-webkit-scrollbar { display: none; }
+.lesson-pill { flex: none; min-height: 40px; padding: 6px 14px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); font-size: .9rem; cursor: pointer; }
+.lesson-pill.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.lesson-hero {
+  position: relative; overflow: hidden;
+  padding: 18px 20px 16px; border-radius: 24px;
+  background: var(--green); color: var(--on-green);
+  box-shadow: var(--shadow);
+}
+.lesson-hero::after { content: ''; position: absolute; right: -40px; top: -40px; width: 150px; height: 150px; border-radius: 50%; background: var(--on-green); opacity: .1; box-shadow: 0 0 0 26px color-mix(in srgb, var(--on-green) 5%, transparent); pointer-events: none; }
+.lesson-kicker { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; opacity: .8; }
+.lesson-title { margin: 4px 0 10px; font-family: var(--serif); font-size: clamp(2rem, 9.5vw, 2.6rem); line-height: 1.05; letter-spacing: -.01em; }
+.lesson-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.topic { padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--on-green) 16%, transparent); font-size: .82rem; font-weight: 600; }
+.lp-bar { height: 8px; border-radius: 4px; background: color-mix(in srgb, var(--on-green) 22%, transparent); overflow: hidden; }
+.lp-bar div { height: 100%; border-radius: 4px; background: var(--sun); transition: width .4s; }
+.lp-text { margin-top: 6px; font-size: .82rem; opacity: .85; }
+.home .verdi { margin: 14px 0 16px; }
+
 /* Úvodná obrazovka */
 #splash {
   position: fixed; inset: 0; z-index: 100;
@@ -453,6 +478,34 @@ h1, h2 { text-wrap: balance; }
 @keyframes caught { 40% { transform: translate(-50%, -80%) scale(1.3); } 100% { opacity: 0; transform: translate(-50%, -160%) scale(.6); } }
 @keyframes ripple { from { opacity: .8; transform: translate(-50%, 0) scale(.6); } to { opacity: 0; transform: translate(-50%, 0) scale(1.3); } }
 @keyframes drift { to { transform: translateX(92px); } }
+
+/* Roztrieď – padajúce slovo a štyri skupiny */
+.sort-status { min-height: 2.8em; text-align: center; color: var(--muted); font-size: .95rem; }
+.sort-status.ok { color: var(--green); font-weight: 650; }
+.sort-status.ko { color: var(--terra); font-weight: 600; }
+.sort-sky { position: relative; height: 34dvh; min-height: 200px; margin: 4px 0 12px; border-radius: 22px; overflow: hidden; background: linear-gradient(180deg, var(--green-soft), transparent); }
+.falling {
+  position: absolute; left: 50%; top: 0; display: flex; align-items: center; gap: 2px;
+  padding: 8px 6px 8px 18px; border-radius: 999px; background: var(--card); box-shadow: 0 6px 18px rgba(0,0,0,.15), inset 0 0 0 2px var(--line);
+  transform: translate(-50%, 0); animation: fall var(--fall) linear forwards;
+}
+.falling-word { font: 600 1.35rem var(--serif); white-space: nowrap; }
+.falling.stop { animation: none; }
+.falling.into { animation: none; transition: transform .45s ease-in, opacity .45s; transform: translate(calc(-50% + var(--tx)), var(--ty)) scale(.4); opacity: 0; }
+.bins { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.bin {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 108px; padding: 10px 8px; border: 2px dashed var(--line); border-radius: 20px; background: var(--card); cursor: pointer; text-align: center;
+  transition: transform .1s, border-color .2s;
+}
+.bin:active { transform: scale(.96); }
+.bin-icon { font-size: 1.7rem; line-height: 1; }
+.bin-name { font-weight: 700; font-size: .9rem; line-height: 1.2; }
+.bin-sk { font-size: .75rem; color: var(--muted); }
+.bin-count { position: absolute; top: 6px; right: 8px; min-width: 24px; padding: 1px 6px; border-radius: 999px; background: var(--green-soft); font-size: .78rem; font-weight: 800; }
+.bin.hint-bin { border-color: var(--green); border-style: solid; background: var(--green-soft); animation: pulse .6s 2; }
+.bin.bump { animation: pulse .35s; }
+@keyframes fall { from { top: 0; } to { top: calc(100% - 52px); } }
 
 /* Spelling */
 .spell-intro { text-align: center; }

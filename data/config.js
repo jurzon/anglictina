@@ -35,6 +35,8 @@ export default {
     pairsDesc: 'Spoj slová s opačným významom',
     pond: 'Opposite Lake',
     pondDesc: 'Slová sa vynárajú z vody – chyť pár, kým sa ponoria',
+    sort: 'Sort it!',
+    sortDesc: 'Slovo padá – pošli ho do správnej skupiny',
     spell: 'Spell it!',
     spellDesc: 'Počúvaj hláskovanie a píš',
   },
