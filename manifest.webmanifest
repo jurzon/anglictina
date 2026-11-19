@@ -1,0 +1,14 @@
+{
+  "name": "Angličtina hrou",
+  "short_name": "Angličtina",
+  "description": "Angličtina hrou – príbehy a minihry",
+  "lang": "sk",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f0ea",
+  "theme_color": "#1d3557",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
