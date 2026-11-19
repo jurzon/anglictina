@@ -1,5 +1,5 @@
 // Zoznam lekcií tejto appky. Novú lekciu stačí importovať a pridať sem.
-import u0 from './unit0.js';
+import u5 from './unit5.js';
 
 export { default as common } from './common.js';
-export const lessons = [u0];
+export const lessons = [u5];

@@ -4,16 +4,16 @@
 export default {
   speechLang: 'en-GB',
   storeKey: 'anglictina.v1',
-  defaultLesson: 'u0',
+  defaultLesson: 'u5',
   // Jedno ťukateľné slovo (regex bez príznakov). Angličtina: aj stiahnuté tvary (don't, it's, I'm, Tom's).
   word: "\\p{L}+(?:['’]\\p{L}+)*",
   // Slová, ktoré sa na začiatku vety v skladačke nezmenšujú
-  keepCaps: ['I'],
+  keepCaps: ['I', 'Žilina', 'Košice', 'Bardejov', 'Bratislava', 'Prešov'],
 
   brand: {
-    kicker: 'Unit 0 · Ukážka',
+    kicker: 'Towns and cities',
     title: ['Angličtina', 'hrou'],
-    source: 'Ukážková lekcia · na domáce precvičovanie',
+    source: 'Na domáce precvičovanie k učebnici',
     author: 'Juraj Zonnenschein',
     email: 'jurzon@seznam.cz',
   },
@@ -29,6 +29,14 @@ export default {
     build: 'Build the sentence',
     buildHint: 'Povedz to po anglicky. Pozor, jedno slovo je navyše.',
     buildDesc: 'Poskladaj anglickú vetu z dlaždíc',
+    walk: 'Voicemail',
+    walkDesc: 'Vypočuj si odkaz a nájdi mesto na mape',
+    pairs: 'Opposites',
+    pairsDesc: 'Spoj slová s opačným významom',
+    pond: 'Opposite Lake',
+    pondDesc: 'Slová sa vynárajú z vody – chyť pár, kým sa ponoria',
+    spell: 'Spell it!',
+    spellDesc: 'Počúvaj hláskovanie a píš',
   },
 
   mascot: {
