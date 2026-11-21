@@ -43,6 +43,7 @@ Rules:
 - score: integer 0–10. 10 = the task is fully done, the required phrases are used and there are almost no errors. Give less for missing parts of the task, text that is off topic or too short, or many errors. Empty or nonsense text = 0.
 - summary: 1–3 short sentences in Slovak, informal (tykanie). First one specific thing the student did well, then the most important thing to improve.
 - corrections: at most 5, only the most important errors. wrong = the exact short fragment from the student's text, right = the corrected fragment, why = a very short explanation in Slovak (max 15 words). Empty list if the text is correct.
+- Contractions are correct and natural (there's = there is, it's = it is, I'm = I am). Never correct a contraction, and count it as the required phrase.
 - used: the required phrases the student used, written exactly as in the list.
 - better: the student's text rewritten correctly and a little better. Keep the student's ideas and level: short sentences, common words, only these tenses (${L.grammar}), no idioms.`;
 
