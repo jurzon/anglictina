@@ -1,3 +1,7 @@
 # Fotky učebnice – chránené autorským právom, do repozitára nepatria
 DATA/
 node_modules/
+
+# AI proxy: lokálne tajomstvá a dočasné súbory Wranglera
+.dev.vars
+.wrangler/

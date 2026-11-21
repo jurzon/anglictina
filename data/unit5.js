@@ -1,6 +1,8 @@
 // Describing a town or city – svetové strany, opozitá a miesta v meste (Vocabulary Bank, str. 156).
 // Značky v texte: [fráza] = jedna ťukateľná jednotka, [slovo|q=id] = slovo s otázkou.
 // Texty sú vlastné, iba so slovnou zásobou lekcie.
+import adventure, { gloss as adventureGloss } from './unit5-adventure.js';
+
 export default {
   id: 'u5',
   code: 'U5',
@@ -12,7 +14,9 @@ export default {
   sortTitle: 'What is there to see?',
   pairsTitle: 'Opposites',
   pairsHint: 'Ťukni na slovo vľavo a potom na jeho opak vpravo.',
-  games: ['walk', 'sort', 'pairs', 'pond', 'spell', 'choice', 'build'],
+  games: ['adventure', 'walk', 'sort', 'pairs', 'pond', 'spell', 'choice', 'build'],
+
+  adventure,
 
   chapters: [
     {
@@ -385,7 +389,7 @@ walk | prejsť sa
 some | niektoré
 go | ísť, chodiť
 says | hovorí | say
-`,
+` + adventureGloss,
 
   // Odkaz na záznamníku: mapa Slovenska. Súradnice sú [zemepisná dĺžka, šírka], obrys je zjednodušený.
   walk: {

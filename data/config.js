@@ -14,6 +14,23 @@ export default {
     j: 'jay', k: 'kay', l: 'el', m: 'em', n: 'en', o: 'oh', p: 'pee', q: 'queue', r: 'are',
     s: 'ess', t: 'tee', u: 'you', v: 'vee', w: 'double you', x: 'ex', y: 'why', z: 'zed',
   },
+  // Rovnocenné tvary pri kontrole napísaných viet (Adventure): obe strany sa prevedú na plný tvar.
+  equivalents: {
+    "i'm": 'i am', "i'd": 'i would', "i'll": 'i will', "i've": 'i have',
+    "you're": 'you are', "it's": 'it is', "he's": 'he is', "she's": 'she is', "we're": 'we are', "they're": 'they are',
+    "that's": 'that is', "there's": 'there is', "what's": 'what is', "where's": 'where is', "let's": 'let us',
+    "isn't": 'is not', "aren't": 'are not', "wasn't": 'was not', "don't": 'do not', "doesn't": 'does not',
+    "didn't": 'did not', "can't": 'cannot', 'can not': 'cannot', "won't": 'will not', "haven't": 'have not',
+    'ok': 'okay',
+    // bez apostrofu (mobil ho často vynechá); its, were, well, ill tu nie sú, sú to iné slová
+    im: 'i am', youre: 'you are', hes: 'he is', shes: 'she is', theyre: 'they are', ive: 'i have',
+    thats: 'that is', theres: 'there is', whats: 'what is', wheres: 'where is', lets: 'let us',
+    isnt: 'is not', arent: 'are not', wasnt: 'was not', dont: 'do not', doesnt: 'does not',
+    didnt: 'did not', cant: 'cannot', wont: 'will not', havent: 'have not',
+  },
+  // Hodnotenie písania cez AI: adresa Cloudflare Workera z priečinka ai-proxy/ (prázdne = bez AI,
+  // hráč dostane vzorový text a sebahodnotenie). lang vyberá v Workeri úroveň a pravidlá jazyka.
+  ai: { url: 'https://anglictina-ai.jurzon.workers.dev/assess', lang: 'en' },
   keepCaps: ['I', 'Žilina', 'Košice', 'Bardejov', 'Bratislava', 'Prešov'],
 
   // Zdieľanie so žiakmi (tlačidlo 📲 na úvodnej obrazovke): verejná adresa appky a jej QR kód.
@@ -48,6 +65,8 @@ export default {
     sortDesc: 'Slovo padá – pošli ho do správnej skupiny',
     spell: 'Spell it!',
     spellDesc: 'Počúvaj hláskovanie a píš',
+    adventure: 'Adventure',
+    adventureDesc: 'Príbeh ide ďalej, len keď to povieš po anglicky. Čítaj, píš, hovor.',
   },
 
   mascot: {
