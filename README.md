@@ -25,7 +25,7 @@ Netreba žiadne konto ani inštaláciu. Pokrok sa ukladá iba v mobile žiaka.
 
 **Priame odkazy na hry** (napr. na domácu úlohu):
 [Príbeh](https://jurzon.github.io/anglictina/#/l/u5/read/0) ·
-[A day in York](https://jurzon.github.io/anglictina/#/l/u5/adventure) ·
+[Tom's Birthday Surprise](https://jurzon.github.io/anglictina/#/l/u5/adventure) ·
 [Voicemail](https://jurzon.github.io/anglictina/#/l/u5/walk) ·
 [What is there to see?](https://jurzon.github.io/anglictina/#/l/u5/sort) ·
 [Opposites](https://jurzon.github.io/anglictina/#/l/u5/pairs) ·
@@ -43,7 +43,7 @@ Netreba žiadne konto ani inštaláciu. Pokrok sa ukladá iba v mobile žiaka.
 ## Hry
 
 - 📖 **Living story**: príbeh v kapitolách. Ťuknutím na slovo sa ukáže preklad, podčiarknuté slová skrývajú otázku a na konci kapitoly sú otázky áno/nie.
-- 🧭 **A day in York** (Adventure): interaktívny príbeh ako textová hra. Pokračuje, len keď žiak sám napíše alebo povie anglickú vetu. Pri neznámom slove dostane najprv anglickú nápovedu, potom prvé písmená a až nakoniec preklad. Po každej scéne nasleduje dril viet SK→EN (chybná veta sa vracia, kým ju žiak nedá) a „vypočuj a zopakuj“ s rozpoznávaním reči. Na konci napíše pohľadnicu, ktorú ohodnotí Claude. Čo žiak nevedel, sa mu vráti v opakovaní o 1, 3, 7, 14 a 30 dní.
+- 🧭 **Tom's Birthday Surprise** (Adventure): textová hra v Yorku. Tom má narodeniny a do 14:00 treba za 20 £ zohnať darček, kvety, tortu a pohľadnicu. Žiak píše alebo hovorí anglické príkazy (*go to the market, talk to the seller, give the cake to Tom*), rozpráva sa s postavami, ktoré vyzerajú ako Einstein, kráľovná Viktória, Shakespeare či Chaplin, nakupuje a vyjednáva, pýta sa *Where can I buy flowers?*, číta mapu s reklamami a taxikárovi (ako Charles Dickens) povie *Can you take me to the market, please?*. Odpovede kontroluje hra a pri inom znení aj AI; pri chybe vysvetlí prečo (napr. *Prečo DO?*) a dá vety na vyslovenie. Po každom rozhovore nasleduje dril, na konci blahoželanie, ktoré ohodnotí Claude. Čo žiak nevedel, vráti sa mu o 1, 3, 7, 14 a 30 dní.
 - 📼 **Voicemail**: hráč počuje hlasový odkaz (text nevidí), napr. *„I'm in a city north of Prešov…“*, nájde mesto na mape a za odmenu dostane vtipný príbeh a výhru.
 - 🗂️ **What is there to see?**: slovo padá a treba ho včas poslať do správnej skupiny (náboženské stavby, obchody, pamiatky, ostatné).
 - 🔁 **Opposites**: spájanie opozít, každý správny pár naleje pohár, séria bez chyby robí combo.
@@ -72,6 +72,25 @@ node tools/validate.mjs          # skontrolovať obsah lekcií
 | `tools/validate.mjs` | kontrola obsahu (beží aj automaticky na GitHube pri každom pushi) |
 
 **Nová lekcia:** pozri [docs/lekcia.md](docs/lekcia.md).
+
+## Fotky
+
+Fotky v hre *Tom's Birthday Surprise* sú z [Wikimedia Commons](https://commons.wikimedia.org/) (priečinky `img/york/` a `img/people/`), použité bez úprav:
+
+| Fotka | Autor | Licencia |
+|---|---|---|
+| [York railway station](https://commons.wikimedia.org/wiki/File:York_Train_Station_(56331202).jpeg) | Michael D Beckwith | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| [River Ouse at Lendal Bridge](https://commons.wikimedia.org/wiki/File:River_Ouse_at_Lendal_Bridge,_York_-_geograph.org.uk_-_2850983.jpg) | Chris Morgan | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| [Clifford's Tower](https://commons.wikimedia.org/wiki/File:York_Castle_Clifford%27s_Tower_2007.jpg) | Steven Fruitsmaak | public domain |
+| [The Shambles](https://commons.wikimedia.org/wiki/File:The_Shambles,_York_-_geograph.org.uk_-_2971409.jpg) | John M Wheatley | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| [York Minster, west front](https://commons.wikimedia.org/wiki/File:York_Minster,_west_front_-_geograph.org.uk_-_676054.jpg) | Gordon Hatton | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| [Stonegate](https://commons.wikimedia.org/wiki/File:Stonegate,_York_Geograph-3484534-by-Derek-Voller.jpg) (pekáreň) | Derek Voller | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| [Isabella Beeton](https://commons.wikimedia.org/wiki/File:Isabella_Beeton,_by_Maull_%26_Polyblank.jpg) (pekárka) | Maull & Polyblank | public domain |
+| [Charles Dickens](https://commons.wikimedia.org/wiki/File:Charles_Dickens_1868.jpg) (taxikár) | Jeremiah Gurney | public domain |
+| [Albert Einstein](https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head.jpg) (pán so psom) | Orren Jack Turner | public domain |
+| [Queen Victoria](https://commons.wikimedia.org/wiki/File:Her_Majesty%27s_Gracious_Smile_by_Charles_Knight.JPG) (sprievodkyňa) | Charles Knight | public domain |
+| [William Shakespeare](https://commons.wikimedia.org/wiki/File:Shakespeare.jpg) (predavač) | pripisované Johnovi Taylorovi | public domain |
+| [Charlie Chaplin](https://commons.wikimedia.org/wiki/File:Chaplin_signed_c1920_(better_cropped).jpg) (čašník) | neznámy fotograf | public domain |
 
 ## Autor a licencia
 

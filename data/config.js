@@ -83,6 +83,21 @@ export default {
       'Close! Angličtina vie prekvapiť ako londýnske počasie.',
       'Step by step. Nabudúce to sadne.',
     ],
+    // pri preklepe (odpoveď uznaná, ale s chybou v písmenku)
+    typo: [
+      'Preklep! Prst skočil na vedľajšiu klávesu.',
+      'Skoro! Písmenká sa pomiešali ako čaj s mliekom.',
+      'Preklep! Aj Shakespeare písal každé slovo inak.',
+      'Klávesnica kýchla. Takto je to správne:',
+      'Uznávam, ale pozri sa na to písmenko!',
+    ],
+    // keď hráč v textovej hre napíše príkaz, ktorému hra nerozumie
+    unknown: [
+      'Mrs Penny nerozumie. Je to po anglicky, alebo po marťansky?',
+      'Hmm, takýto príkaz v Yorku nepoznajú.',
+      'Skoro! Ale Angličan by sa na teba len zdvorilo usmial.',
+      'Tomu nerozumiem ani s čajom v ruke.',
+    ],
     nonsense: [
       'Zaujímavé, ale to žiadny Angličan nepovie.',
       'Mrs Penny dvíha obočie.',

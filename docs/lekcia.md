@@ -72,29 +72,18 @@ Podrobnosti ku každej hre sú v komentári na začiatku jej súboru v `js/games
 
 Všetko jazykovo špecifické je v `data/config.js`: jazyk hlasu (`speechLang`), názvy hier (`ui`), maskot a jeho hlášky (`mascot`), názvy písmen na hláskovanie (`letters`). Kód v `js/` je spoločný pre všetky jazykové verzie.
 
-### Interaktívny príbeh (`adventure`)
+### Textová hra (`adventure`)
 
-Príbeh ide ďalej, len keď hráč sám napíše alebo povie anglickú vetu. Jedna scéna má tieto kroky:
-rozcvička z opakovania → čítanie → rozhodnutie → dril viet SK→EN → hovorenie → prípadne písanie.
+Hráč chodí po meste, zbiera veci a rozpráva sa s ľuďmi – všetko po anglicky. Príkazy píše alebo hovorí
+(*go to the market*, *take the map*, *talk to the man*, *give the cake to Tom*), alebo ťukne na tlačidlo.
+Úplný príklad je `data/unit5-adventure.js` („Tom's Birthday Surprise“), presný formát je v komentári na začiatku `js/games/adventure.js`.
 
-```js
-adventure: {
-  title: 'A day in York', sk: 'Deň v Yorku', intro: 'Úvod po slovensky.', start: 'station',
-  clues: { crowded: 'Full of people.' },        // anglická nápoveda k slovu (prvý stupeň rebríka)
-  scenes: {
-    station: {
-      title, sk, lines: [['Text so [značkami].', 'preklad']],   // ako v Living story
-      choice: { sk: 'Čo urobíš?', options: [{ sk: 'Zámer po slovensky', t: '(Excuse me,) where is the station?', alt: [], go: 'directions', res: ['Odpoveď postavy.', 'preklad'] }] },
-      drill: [{ sk: 'Veta po slovensky.', t: 'English sentence.', alt: ['Iné správne znenie.'] }],
-      speak: ['Sentence to repeat.'],
-      write: { sk: 'Zadanie', must: ['frázy', 'ktoré má použiť'], words: [40, 80], model: 'Vzorový text.' },
-    },
-  },
-},
-```
-
-- **Rebrík nápovied** pri slove: anglické vysvetlenie (`clues`) → prvé písmená slovenského prekladu → preklad. Body 2 / 1 / 0. Nevedené slová idú do opakovania.
-- **Odpovede** (`t`, `alt`): časti v zátvorkách sú voliteľné. Interpunkcia, veľké písmená a jeden preklep sa tolerujú. Stiahnuté tvary (where's = where is) sú v `config.equivalents`.
-- **Opakovanie**: čo hráč nevedel, sa vráti o 1, 3, 7, 14 a 30 dní (Leitnerove krabičky v `js/srs.js`).
-- **Písanie** hodnotí Claude cez server v `ai-proxy/` (adresa v `config.ai.url`). Bez neho hráč dostane vzorový text.
-- Každá scéna musí mať `choice` (kam ďalej) alebo `write` (koniec). Slová z `lines` musia byť v slovníku; slovník príbehu môže byť v samostatnom súbore (pozri `data/unit5-adventure.js`).
+- **places**: miesta s fotkou, opisom (`lines` pri prvej návšteve, potom `look`), ľuďmi, vecami, cestami (`exits: { miesto: minúty }`), `reveal` (miesta, ktoré hráč pri príchode objaví) a `drill`/`speak` (precvičí sa po prvom rozhovore na mieste).
+- **people**: `name` (anglicky, na tlačidle), `aliases`, `who` (portrét a vtipný popis), `talk` (varianty rozhovoru podľa podmienky `if`).
+- **Kroky rozhovoru**: `say` (postava hovorí), `ask` (hráč musí odpovedať), `choose` (výber, `loop: true` pre obchody), `give`, `buy` (kontrola peňazí, `then`/`else`), `flag`, `reveal`, `if`.
+- **items**: `name`, `a` (tvar do otázky: *a mug*), `where` (kde sa predáva), `icon`, `price`, `desc`, `tom` (čo povie Tom pri darovaní). Mapa (`mapItem`) má `ads` – reklamy, z ktorých hráč zistí, kde sa čo predáva; miesta majú `xy` (poloha na mape v %).
+- **Taxík**: postava s `taxi: { price, minutes, greet, ask: { sk, t: 'Can you take me to {place}, please?', alt }, bye, arrive }` – hráč povie, kam chce ísť.
+- Hráč sa môže kohokoľvek opýtať *Where can I buy …?* (`verbs.where`, odpoveď `msgs.whereAnswer`). **goal**: veci, ktoré treba zohnať. **final**: miesto, postava a písanie na konci (hodnotí AI).
+- **verbs** a **msgs**: anglické príkazy a odpovede hry (všetko jazykové je v dátach, engine `js/world.js` je spoločný).
+- Odpovede (`t`, `alt`): časti v zátvorkách sú voliteľné; iné správne znenie posúdi AI. Pri vynechanom *do/the/to…* sa ukáže tip z `tips`.
+- `node tools/validate.mjs` skontroluje odkazy, preklady slov aj to, či sa dá cieľ splniť z rozpočtu.
