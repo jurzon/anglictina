@@ -27,6 +27,9 @@ export default {
     thats: 'that is', theres: 'there is', whats: 'what is', wheres: 'where is', lets: 'let us',
     isnt: 'is not', arent: 'are not', wasnt: 'was not', dont: 'do not', doesnt: 'does not',
     didnt: 'did not', cant: 'cannot', wont: 'will not', havent: 'have not',
+    // americký a britský pravopis sú rovnako správne
+    center: 'centre', theater: 'theatre', color: 'colour', colorful: 'colourful', favorite: 'favourite',
+    meters: 'metres', kilometers: 'kilometres', mom: 'mum', gray: 'grey', traveling: 'travelling',
   },
   // Hodnotenie písania cez AI: adresa Cloudflare Workera z priečinka ai-proxy/ (prázdne = bez AI,
   // hráč dostane vzorový text a sebahodnotenie). lang vyberá v Workeri úroveň a pravidlá jazyka.

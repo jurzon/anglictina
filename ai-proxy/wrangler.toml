@@ -11,6 +11,9 @@ ALLOWED_ORIGINS = "https://jurzon.github.io"
 # Denné limity: z jednej IP adresy a spolu za všetkých.
 PER_IP_DAY = "20"
 TOTAL_DAY = "300"
+# Kontrola jednej vety (keď sa odpoveď líši od vzoru) – lacnejšia, preto vyššie limity.
+CHECK_PER_IP_DAY = "150"
+CHECK_TOTAL_DAY = "1000"
 
 # Počítadlá denných limitov (npx wrangler kv namespace create LIMITS)
 [[kv_namespaces]]
